@@ -51,7 +51,7 @@ function(){
 
 // <!-- typed js effect starts -->
     var typed = new Typed(".typing-text", {
-        strings: ["Cyber Security Specialist","software developer", "Solution Consultant", "Frontend developer", "Power BI Developer", "Power Apps Developer"],
+        strings: ["Software Developer", "Solution Consultant", "Frontend Developer", "Power BI Developer", "Power Apps Developer"],
         loop: true,
         typeSpeed: 50,
 		backSpeed: 25,
