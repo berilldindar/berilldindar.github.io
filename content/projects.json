@@ -1,0 +1,44 @@
+[
+  {
+    "title": "HR Benefit Management",
+    "description": "Power Apps ve SharePoint ile çok kiracılı yapıda tasarlanmış yan hak yönetim deneyimi.",
+    "image": "/assests/images/projects/proje1.png",
+    "tags": ["Power Apps", "SharePoint", "UX"],
+    "note": "Müşteri projesi"
+  },
+  {
+    "title": "Pneumonia Detection",
+    "description": "CNN, VGG16, AlexNet, GoogLeNet ve ResNet modelleriyle pnömoni tespiti denemeleri.",
+    "image": "/assests/images/projects/proje7.png",
+    "tags": ["Python", "Deep Learning", "Computer Vision"],
+    "url": "https://github.com/berilldindar/Pneumonia-Detection-"
+  },
+  {
+    "title": "Local Thresholding",
+    "description": "Görüntülerin yerel bölgelerini ayrı ayrı değerlendirerek daha anlaşılır sonuçlar üreten görüntü işleme çalışması.",
+    "image": "/assests/images/projects/proje8.png",
+    "tags": ["Image Processing", "Python"],
+    "url": "https://github.com/berilldindar/Image-Processing-Local-Thresholding"
+  },
+  {
+    "title": "Telemedicine",
+    "description": "Sağlık hizmetlerine uzaktan erişimi kolaylaştırmak için geliştirilen e-sağlık danışmanlık sistemi.",
+    "image": "/assests/images/projects/proje2.png",
+    "tags": ["Web", "Health Tech"],
+    "url": "https://github.com/berilldindar/KirikkaleOnlineTipMerkezi"
+  },
+  {
+    "title": "OkCupid Text Mining",
+    "description": "Kullanıcı profillerindeki metinlerin platform ve kullanıcı deneyimine nasıl katkı sağlayabileceğini araştıran çalışma.",
+    "image": "/assests/images/projects/proje3.png",
+    "tags": ["NLP", "Text Mining"],
+    "url": "https://github.com/berilldindar/OkCupidProfilesTextMining"
+  },
+  {
+    "title": "Credit Card Fraud",
+    "description": "IBM SPSS Modeler ile kredi kartı dolandırıcılığı tahmini üzerine makine öğrenmesi modeli.",
+    "image": "/assests/images/projects/proje4.png",
+    "tags": ["Machine Learning", "SPSS"],
+    "url": "https://github.com/berilldindar/creditcardfraud"
+  }
+]

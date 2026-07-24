@@ -1,0 +1,107 @@
+{
+  "site": {
+    "title": "Beril Dindar",
+    "description": "Cloud engineering, Microsoft teknolojileri, yapay zekâ ve güvenli dijital çözümler üzerine teknik çalışmalar ve yazılar.",
+    "url": "https://berilldindar.github.io"
+  },
+  "identity": {
+    "name": "Beril Dindar",
+    "shortName": "Beril",
+    "role": "Cloud Engineer",
+    "email": "dindarberil@gmail.com",
+    "location": "Ankara, Türkiye"
+  },
+  "images": {
+    "hero": "/assests/images/favicon.jpg",
+    "about": "/assests/images/profile.png",
+    "avatar": "/assests/images/favicon.jpg",
+    "socialPreview": "/assests/images/profile.png",
+    "favicon": "/assests/images/favicon.jpg"
+  },
+  "socials": [
+    {
+      "label": "LinkedIn",
+      "short": "in",
+      "url": "https://www.linkedin.com/in/berildindar/"
+    },
+    {
+      "label": "GitHub",
+      "short": "gh",
+      "url": "https://github.com/berilldindar"
+    },
+    {
+      "label": "Medium",
+      "short": "M",
+      "url": "https://dindarberil.medium.com/"
+    }
+  ],
+  "hero": {
+    "eyebrow": "CLOUD ENGINEERING · TECHNICAL LEADERSHIP",
+    "headlinePrefix": "Teknolojiyi",
+    "headlineHighlight": "stratejiyle,",
+    "headlineMiddle": "stratejiyi çalışan",
+    "headlineEmphasis": "sistemlerle",
+    "headlineSuffix": "buluşturuyorum.",
+    "description": "Microsoft teknolojileri, güvenli bulut mimarileri ve yapay zekâ çözümleri odağında; teknik ekiplerle iş hedefleri arasında güçlü bir köprü kuruyorum.",
+    "primaryAction": "Teknik yazılar",
+    "secondaryAction": "Projeler ve çalışmalar",
+    "socialLabel": "Profesyonel bağlantılar",
+    "badges": [
+      "MICROSOFT AZURE",
+      "TECHNICAL DELIVERY",
+      "SECURE · SCALABLE · RELIABLE"
+    ],
+    "expertise": [
+      "MICROSOFT AZURE",
+      "POWER PLATFORM",
+      "AI SOLUTIONS",
+      "CLOUD SECURITY",
+      "SOLUTION ARCHITECTURE",
+      "TECHNICAL LEADERSHIP"
+    ]
+  },
+  "home": {
+    "writingEyebrow": "01 / TEKNİK YAZILAR",
+    "writingTitle": "Uygulamadan gelen",
+    "writingEmphasis": "teknik içgörüler.",
+    "writingDescription": "Bulut, yapay zekâ ve Microsoft teknolojileri üzerine; gerçek deneyimlere dayanan, uygulanabilir teknik notlar.",
+    "projectsEyebrow": "02 / SEÇİLİ ÇALIŞMALAR",
+    "projectsTitle": "Çözümleri uçtan uca",
+    "projectsEmphasis": "hayata geçiriyorum.",
+    "projectsDescription": "Bulut servislerinden kurumsal iş uygulamalarına, veri ve yapay zekâ çözümlerine uzanan teknik çalışmalar.",
+    "contactEyebrow": "İŞ BİRLİĞİ",
+    "contactTitle": "Teknik bir hedefiniz varsa",
+    "contactEmphasis": "birlikte değerlendirelim.",
+    "contactDescription": "Cloud, Power Platform, yapay zekâ ve teknik dönüşüm başlıklarında iletişime geçebilirsiniz.",
+    "contactAction": "İletişime geçin"
+  },
+  "blog": {
+    "eyebrow": "TEKNİK PERSPEKTİF",
+    "title": "Deneyime dayanan",
+    "emphasis": "teknik yazılar.",
+    "description": "Azure, Power Platform, yapay zekâ, güvenlik ve modern mühendislik pratikleri üzerine içerikler."
+  },
+  "projectsPage": {
+    "eyebrow": "MÜHENDİSLİK · TESLİMAT · ETKİ",
+    "title": "Seçili projeler ve",
+    "emphasis": "teknik çalışmalar.",
+    "description": "Kurumsal çözümlerden yapay zekâ ve görüntü işleme çalışmalarına uzanan seçili proje portföyü."
+  },
+  "about": {
+    "eyebrow": "PROFİL",
+    "title": "Cloud Engineer.",
+    "emphasis": "Çözüm odaklı teknik lider.",
+    "description": "Karmaşık teknolojileri güvenli, ölçeklenebilir ve iş hedefleriyle uyumlu çözümlere dönüştürmeye odaklanıyorum.",
+    "photoLabel": "ankara ↗ cloud",
+    "experienceEyebrow": "DENEYİM",
+    "experienceTitle": "Teknik uzmanlıktan",
+    "experienceEmphasis": "ölçülebilir etkiye.",
+    "certificatesEyebrow": "YETKİNLİKLER",
+    "certificatesTitle": "Uzmanlığı destekleyen",
+    "certificatesEmphasis": "sertifikalar.",
+    "certificatesDescription": "Microsoft bulut, güvenlik, yapay zekâ ve Power Platform yetkinliklerini doğrulayan seçili sertifikalar."
+  },
+  "footer": {
+    "tagline": "Cloud engineering · Technical delivery · Continuous learning"
+  }
+}

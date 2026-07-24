@@ -4,72 +4,21 @@ import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
 const dist = join(root, "dist");
-const site = {
-  title: "Beril Dindar",
-  description: "Cloud engineering, Microsoft teknolojileri, yapay zekâ ve güvenli dijital çözümler üzerine teknik çalışmalar ve yazılar.",
-  url: "https://berilldindar.github.io"
-};
+const contentRoot = join(root, "content");
 
-const projects = [
-  {
-    title: "HR Benefit Management",
-    description: "Power Apps ve SharePoint ile çok kiracılı yapıda tasarlanmış yan hak yönetim deneyimi.",
-    image: "/assests/images/projects/proje1.png",
-    tags: ["Power Apps", "SharePoint", "UX"],
-    note: "Müşteri projesi"
-  },
-  {
-    title: "Pneumonia Detection",
-    description: "CNN, VGG16, AlexNet, GoogLeNet ve ResNet modelleriyle pnömoni tespiti denemeleri.",
-    image: "/assests/images/projects/proje7.png",
-    tags: ["Python", "Deep Learning", "Computer Vision"],
-    url: "https://github.com/berilldindar/Pneumonia-Detection-"
-  },
-  {
-    title: "Local Thresholding",
-    description: "Görüntülerin yerel bölgelerini ayrı ayrı değerlendirerek daha anlaşılır sonuçlar üreten görüntü işleme çalışması.",
-    image: "/assests/images/projects/proje8.png",
-    tags: ["Image Processing", "Python"],
-    url: "https://github.com/berilldindar/Image-Processing-Local-Thresholding"
-  },
-  {
-    title: "Telemedicine",
-    description: "Sağlık hizmetlerine uzaktan erişimi kolaylaştırmak için geliştirilen e-sağlık danışmanlık sistemi.",
-    image: "/assests/images/projects/proje2.png",
-    tags: ["Web", "Health Tech"],
-    url: "https://github.com/berilldindar/KirikkaleOnlineTipMerkezi"
-  },
-  {
-    title: "OkCupid Text Mining",
-    description: "Kullanıcı profillerindeki metinlerin platform ve kullanıcı deneyimine nasıl katkı sağlayabileceğini araştıran çalışma.",
-    image: "/assests/images/projects/proje3.png",
-    tags: ["NLP", "Text Mining"],
-    url: "https://github.com/berilldindar/OkCupidProfilesTextMining"
-  },
-  {
-    title: "Credit Card Fraud",
-    description: "IBM SPSS Modeler ile kredi kartı dolandırıcılığı tahmini üzerine makine öğrenmesi modeli.",
-    image: "/assests/images/projects/proje4.png",
-    tags: ["Machine Learning", "SPSS"],
-    url: "https://github.com/berilldindar/creditcardfraud"
+async function readJson(filename) {
+  try {
+    return JSON.parse(await readFile(join(contentRoot, filename), "utf8"));
+  } catch (error) {
+    throw new Error(`${filename} okunamadı: ${error.message}`);
   }
-];
+}
 
-const experience = [
-  ["DTech Cloud", "Cloud Engineer", "Kasım 2024 — Bugün"],
-  ["KoçSistem", "Cloud Software Engineer & Microsoft Cloud Solutions Consultant", "Mart 2024 — Kasım 2024"],
-  ["CloudCan", "Cloud Software Engineer & Microsoft Cloud Solutions Consultant", "Eylül 2022 — Aralık 2023"],
-  ["Microsoft Learn Student Ambassadors", "AI Researcher", "2021 — 2024"]
-];
-
-const certificates = [
-  "Microsoft Certified: Cybersecurity Architect Expert",
-  "Microsoft Certified: Security Operations Analyst Associate",
-  "Microsoft Certified: Azure AI Engineer Associate",
-  "Microsoft Certified: Power Platform Solution Architect Expert",
-  "Microsoft Certified: Power Platform Developer Associate",
-  "Hugging Face AI Agent Course"
-];
+const profile = await readJson("profile.json");
+const projects = await readJson("projects.json");
+const experience = await readJson("experience.json");
+const certificates = await readJson("certificates.json");
+const site = profile.site;
 
 function escapeHtml(value = "") {
   return String(value)
@@ -190,16 +139,16 @@ function formatDate(value) {
 function nav(active) {
   const items = [["Ana Sayfa", "/"], ["Yazılar", "/blog/"], ["Projeler", "/projeler/"], ["Hakkımda", "/hakkimda/"]];
   return `
-    <a class="brand" href="/" aria-label="Beril Dindar ana sayfa">
+    <a class="brand" href="/" aria-label="${escapeHtml(profile.identity.name)} ana sayfa">
       <span class="brand-mark">&lt;/&gt;</span>
-      <span>Beril<span class="brand-dot">.</span></span>
+      <span>${escapeHtml(profile.identity.shortName)}<span class="brand-dot">.</span></span>
     </a>
     <button class="menu-button" type="button" aria-label="Menüyü aç" aria-expanded="false" data-menu-button>
       <span></span><span></span>
     </button>
     <nav class="site-nav" aria-label="Ana menü" data-menu>
       ${items.map(([label, href]) => `<a href="${href}"${active === href ? ' aria-current="page"' : ""}>${label}</a>`).join("")}
-      <a class="nav-note" href="mailto:dindarberil@gmail.com">İletişime geçin <span>↗</span></a>
+      <a class="nav-note" href="mailto:${escapeHtml(profile.identity.email)}">İletişime geçin <span>↗</span></a>
     </nav>`;
 }
 
@@ -212,14 +161,14 @@ function layout({ title, description = site.description, active = "", content, p
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(fullTitle)}</title>
   <meta name="description" content="${escapeHtml(description)}">
-  <meta name="theme-color" content="#fffaf3">
+  <meta name="theme-color" content="#071d33">
   <link rel="canonical" href="${site.url}${active || "/"}">
   <meta property="og:title" content="${escapeHtml(fullTitle)}">
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:type" content="${article ? "article" : "website"}">
   <meta property="og:url" content="${site.url}${active || "/"}">
-  <meta property="og:image" content="${site.url}/assests/images/profile.png">
-  <link rel="icon" href="/assests/images/favicon.jpg">
+  <meta property="og:image" content="${site.url}${escapeHtml(profile.images.socialPreview)}">
+  <link rel="icon" href="${escapeHtml(profile.images.favicon)}">
   <link rel="alternate" type="application/rss+xml" title="${site.title}" href="/feed.xml">
   <link rel="stylesheet" href="/assets/site.css">
 </head>
@@ -229,9 +178,9 @@ function layout({ title, description = site.description, active = "", content, p
   <main>${content}</main>
   <footer class="site-footer">
     <div class="shell footer-grid">
-      <div><a class="brand footer-brand" href="/"><span class="brand-mark">&lt;/&gt;</span><span>Beril<span class="brand-dot">.</span></span></a><p>Cloud engineering · Technical delivery · Continuous learning</p></div>
-      <div class="footer-links"><a href="/blog/">Yazılar</a><a href="/projeler/">Projeler</a><a href="https://github.com/berilldindar" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/berildindar/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
-      <p class="footer-note">© <span data-year></span> Beril Dindar<br>Ankara, Türkiye</p>
+      <div><a class="brand footer-brand" href="/"><span class="brand-mark">&lt;/&gt;</span><span>${escapeHtml(profile.identity.shortName)}<span class="brand-dot">.</span></span></a><p>${escapeHtml(profile.footer.tagline)}</p></div>
+      <div class="footer-links"><a href="/blog/">Yazılar</a><a href="/projeler/">Projeler</a>${profile.socials.map((social) => `<a href="${escapeHtml(social.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(social.label)} ↗</a>`).join("")}</div>
+      <p class="footer-note">© <span data-year></span> ${escapeHtml(profile.identity.name)}<br>${escapeHtml(profile.identity.location)}</p>
     </div>
   </footer>
   <script src="/assets/site.js" defer></script>
@@ -276,33 +225,31 @@ function homePage(posts) {
     <div class="hero-scribble hero-scribble-two" aria-hidden="true"></div>
     <div class="shell hero-grid">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="status-dot"></span> CLOUD ENGINEERING · TECHNICAL LEADERSHIP</div>
-        <h1>Teknolojiyi <span>stratejiyle,</span><br>stratejiyi çalışan<br><em>sistemlerle</em> buluşturuyorum.</h1>
-        <p>Microsoft teknolojileri, güvenli bulut mimarileri ve yapay zekâ çözümleri odağında; teknik ekiplerle iş hedefleri arasında güçlü bir köprü kuruyorum.</p>
+        <div class="eyebrow"><span class="status-dot"></span> ${escapeHtml(profile.hero.eyebrow)}</div>
+        <h1>${escapeHtml(profile.hero.headlinePrefix)} <span>${escapeHtml(profile.hero.headlineHighlight)}</span><br>${escapeHtml(profile.hero.headlineMiddle)}<br><em>${escapeHtml(profile.hero.headlineEmphasis)}</em> ${escapeHtml(profile.hero.headlineSuffix)}</h1>
+        <p>${escapeHtml(profile.hero.description)}</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="/blog/">Teknik yazılar <span>→</span></a>
-          <a class="button button-ghost" href="/projeler/">Projeler ve çalışmalar</a>
+          <a class="button button-primary" href="/blog/">${escapeHtml(profile.hero.primaryAction)} <span>→</span></a>
+          <a class="button button-ghost" href="/projeler/">${escapeHtml(profile.hero.secondaryAction)}</a>
         </div>
         <div class="social-row" aria-label="Sosyal bağlantılar">
-          <a href="https://www.linkedin.com/in/berildindar/" target="_blank" rel="noopener noreferrer">in</a>
-          <a href="https://github.com/berilldindar" target="_blank" rel="noopener noreferrer">gh</a>
-          <a href="https://dindarberil.medium.com/" target="_blank" rel="noopener noreferrer">M</a>
-          <span>Profesyonel bağlantılar</span>
+          ${profile.socials.map((social) => `<a href="${escapeHtml(social.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(social.label)}">${escapeHtml(social.short)}</a>`).join("")}
+          <span>${escapeHtml(profile.hero.socialLabel)}</span>
         </div>
       </div>
       <div class="hero-visual">
-        <div class="portrait-ring"><img src="/assests/images/favicon.jpg" alt="Beril Dindar" fetchpriority="high"></div>
-        <div class="float-note note-one">MICROSOFT AZURE</div>
-        <div class="float-note note-two">TECHNICAL DELIVERY</div>
-        <div class="float-code" aria-hidden="true">SECURE<br>SCALABLE<br>RELIABLE</div>
+        <div class="portrait-ring"><img src="${escapeHtml(profile.images.hero)}" alt="${escapeHtml(profile.identity.name)}" fetchpriority="high"></div>
+        <div class="float-note note-one">${escapeHtml(profile.hero.badges[0])}</div>
+        <div class="float-note note-two">${escapeHtml(profile.hero.badges[1])}</div>
+        <div class="float-code" aria-hidden="true">${escapeHtml(profile.hero.badges[2])}</div>
       </div>
     </div>
   </section>
-  <section class="marquee" aria-label="Uzmanlık alanları"><div>MICROSOFT AZURE&nbsp;&nbsp;•&nbsp;&nbsp; POWER PLATFORM&nbsp;&nbsp;•&nbsp;&nbsp; AI SOLUTIONS&nbsp;&nbsp;•&nbsp;&nbsp; CLOUD SECURITY&nbsp;&nbsp;•&nbsp;&nbsp; SOLUTION ARCHITECTURE&nbsp;&nbsp;•&nbsp;&nbsp; TECHNICAL LEADERSHIP</div></section>
+  <section class="marquee" aria-label="Uzmanlık alanları"><div>${profile.hero.expertise.map(escapeHtml).join("&nbsp;&nbsp;•&nbsp;&nbsp; ")}</div></section>
   <section class="section shell">
     <div class="section-heading">
-      <div><span class="kicker">01 / TEKNİK YAZILAR</span><h2>Uygulamadan gelen<br><em>teknik içgörüler.</em></h2></div>
-      <p>Bulut, yapay zekâ ve Microsoft teknolojileri üzerine; gerçek deneyimlere dayanan, uygulanabilir teknik notlar.</p>
+      <div><span class="kicker">${escapeHtml(profile.home.writingEyebrow)}</span><h2>${escapeHtml(profile.home.writingTitle)}<br><em>${escapeHtml(profile.home.writingEmphasis)}</em></h2></div>
+      <p>${escapeHtml(profile.home.writingDescription)}</p>
     </div>
     <div class="post-grid">${latest.map((post, index) => postCard(post, index === 0)).join("")}</div>
     <a class="all-link" href="/blog/">Tüm yazıları gör <span>→</span></a>
@@ -310,8 +257,8 @@ function homePage(posts) {
   <section class="section section-ink">
     <div class="shell">
       <div class="section-heading section-heading-light">
-        <div><span class="kicker">02 / SEÇİLİ ÇALIŞMALAR</span><h2>Çözümleri uçtan uca<br><em>hayata geçiriyorum.</em></h2></div>
-        <p>Bulut servislerinden kurumsal iş uygulamalarına, veri ve yapay zekâ çözümlerine uzanan teknik çalışmalar.</p>
+        <div><span class="kicker">${escapeHtml(profile.home.projectsEyebrow)}</span><h2>${escapeHtml(profile.home.projectsTitle)}<br><em>${escapeHtml(profile.home.projectsEmphasis)}</em></h2></div>
+        <p>${escapeHtml(profile.home.projectsDescription)}</p>
       </div>
       <div class="project-preview">${projects.slice(0, 3).map(projectCard).join("")}</div>
       <a class="all-link all-link-light" href="/projeler/">Tüm projeler <span>→</span></a>
@@ -319,9 +266,9 @@ function homePage(posts) {
   </section>
   <section class="section shell">
     <div class="hello-card">
-      <div><span class="kicker">İŞ BİRLİĞİ</span><h2>Teknik bir hedefiniz varsa<br><em>birlikte değerlendirelim.</em></h2></div>
-      <p>Cloud, Power Platform, yapay zekâ ve teknik dönüşüm başlıklarında iletişime geçebilirsiniz.</p>
-      <a class="button button-primary" href="mailto:dindarberil@gmail.com">İletişime geçin ↗</a>
+      <div><span class="kicker">${escapeHtml(profile.home.contactEyebrow)}</span><h2>${escapeHtml(profile.home.contactTitle)}<br><em>${escapeHtml(profile.home.contactEmphasis)}</em></h2></div>
+      <p>${escapeHtml(profile.home.contactDescription)}</p>
+      <a class="button button-primary" href="mailto:${escapeHtml(profile.identity.email)}">${escapeHtml(profile.home.contactAction)} ↗</a>
     </div>
   </section>`;
   return layout({ title: site.title, active: "/", content, pageClass: "home-page" });
@@ -332,9 +279,9 @@ function blogPage(posts) {
   const content = `
   <section class="page-hero page-hero-blog">
     <div class="shell narrow-shell">
-      <span class="kicker">TEKNİK PERSPEKTİF</span>
-      <h1>Deneyime dayanan<br><em>teknik yazılar.</em></h1>
-      <p>Azure, Power Platform, yapay zekâ, güvenlik ve modern mühendislik pratikleri üzerine içerikler.</p>
+      <span class="kicker">${escapeHtml(profile.blog.eyebrow)}</span>
+      <h1>${escapeHtml(profile.blog.title)}<br><em>${escapeHtml(profile.blog.emphasis)}</em></h1>
+      <p>${escapeHtml(profile.blog.description)}</p>
     </div>
   </section>
   <section class="section shell">
@@ -345,7 +292,7 @@ function blogPage(posts) {
     <div class="post-grid post-grid-all">${posts.map(postCard).join("")}</div>
     <div class="empty-state" data-empty-state hidden><span>¯\\_(ツ)_/¯</span><h2>Bu aramaya uygun bir yazı yok.</h2><p>Başka bir kelime deneyebilirsin.</p></div>
   </section>`;
-  return layout({ title: "Yazılar", description: "Beril Dindar'ın Azure, Power Platform, yapay zekâ ve bulut üzerine teknik yazıları.", active: "/blog/", content, pageClass: "blog-page" });
+  return layout({ title: "Yazılar", description: profile.blog.description, active: "/blog/", content, pageClass: "blog-page" });
 }
 
 function postPage(post) {
@@ -358,8 +305,8 @@ function postPage(post) {
         <h1>${escapeHtml(post.title)}</h1>
         <p class="article-lead">${escapeHtml(post.description)}</p>
         <div class="article-meta">
-          <img src="/assests/images/favicon.jpg" alt="" aria-hidden="true">
-          <div><strong>Beril Dindar</strong><span><time datetime="${escapeHtml(post.date)}">${formatDate(post.date)}</time> · ${post.readingTime} dk okuma</span></div>
+          <img src="${escapeHtml(profile.images.avatar)}" alt="" aria-hidden="true">
+          <div><strong>${escapeHtml(profile.identity.name)}</strong><span><time datetime="${escapeHtml(post.date)}">${formatDate(post.date)}</time> · ${post.readingTime} dk okuma</span></div>
         </div>
         ${tagList(post.tags)}
       </div>
@@ -367,7 +314,7 @@ function postPage(post) {
     <div class="shell article-shell article-body">${markdownToHtml(post.body)}</div>
     <footer class="shell article-shell article-footer">
       <div><span class="kicker">YAZI HOŞUNA GİTTİ Mİ?</span><h2>Birlikte konuşalım.</h2><p>Fikrini, sorunu ya da kendi deneyimini paylaşabilirsin.</p></div>
-      <a class="button button-primary" href="https://www.linkedin.com/in/berildindar/" target="_blank" rel="noopener noreferrer">LinkedIn’de buluşalım ↗</a>
+      <a class="button button-primary" href="${escapeHtml(profile.socials.find((social) => social.label === "LinkedIn")?.url || profile.socials[0].url)}" target="_blank" rel="noopener noreferrer">LinkedIn’de buluşalım ↗</a>
     </footer>
   </article>`;
   return layout({ title: post.title, description: post.description, active: `/blog/${post.slug}/`, content, pageClass: "article-page", article: true });
@@ -376,31 +323,31 @@ function postPage(post) {
 function projectsPage() {
   const content = `
   <section class="page-hero page-hero-projects">
-    <div class="shell narrow-shell"><span class="kicker">MÜHENDİSLİK · TESLİMAT · ETKİ</span><h1>Seçili projeler ve<br><em>teknik çalışmalar.</em></h1><p>Kurumsal çözümlerden yapay zekâ ve görüntü işleme çalışmalarına uzanan seçili proje portföyü.</p></div>
+    <div class="shell narrow-shell"><span class="kicker">${escapeHtml(profile.projectsPage.eyebrow)}</span><h1>${escapeHtml(profile.projectsPage.title)}<br><em>${escapeHtml(profile.projectsPage.emphasis)}</em></h1><p>${escapeHtml(profile.projectsPage.description)}</p></div>
   </section>
   <section class="section shell"><div class="projects-list">${projects.map(projectCard).join("")}</div></section>`;
-  return layout({ title: "Projeler", description: "Beril Dindar'ın bulut, Power Platform, veri ve yapay zekâ projeleri.", active: "/projeler/", content, pageClass: "projects-page" });
+  return layout({ title: "Projeler", description: profile.projectsPage.description, active: "/projeler/", content, pageClass: "projects-page" });
 }
 
 function aboutPage() {
   const content = `
   <section class="page-hero page-hero-about">
     <div class="shell about-hero-grid">
-      <div><span class="kicker">PROFİL</span><h1>Cloud Engineer.<br><em>Çözüm odaklı teknik lider.</em></h1><p>Karmaşık teknolojileri güvenli, ölçeklenebilir ve iş hedefleriyle uyumlu çözümlere dönüştürmeye odaklanıyorum.</p></div>
-      <div class="about-photo"><img src="/assests/images/profile.png" alt="Beril Dindar"><span>ankara ↗ cloud</span></div>
+      <div><span class="kicker">${escapeHtml(profile.about.eyebrow)}</span><h1>${escapeHtml(profile.about.title)}<br><em>${escapeHtml(profile.about.emphasis)}</em></h1><p>${escapeHtml(profile.about.description)}</p></div>
+      <div class="about-photo"><img src="${escapeHtml(profile.images.about)}" alt="${escapeHtml(profile.identity.name)}"><span>${escapeHtml(profile.about.photoLabel)}</span></div>
     </div>
   </section>
   <section class="section shell about-grid">
-    <div><span class="kicker">DENEYİM</span><h2>Teknik uzmanlıktan<br><em>ölçülebilir etkiye.</em></h2></div>
-    <div class="timeline">${experience.map(([company, role, date]) => `<article><span>${escapeHtml(date)}</span><h3>${escapeHtml(company)}</h3><p>${escapeHtml(role)}</p></article>`).join("")}</div>
+    <div><span class="kicker">${escapeHtml(profile.about.experienceEyebrow)}</span><h2>${escapeHtml(profile.about.experienceTitle)}<br><em>${escapeHtml(profile.about.experienceEmphasis)}</em></h2></div>
+    <div class="timeline">${experience.map((item) => `<article><span>${escapeHtml(item.date)}</span><h3>${escapeHtml(item.company)}</h3><p>${escapeHtml(item.role)}</p></article>`).join("")}</div>
   </section>
   <section class="section section-sky">
     <div class="shell certificate-grid">
-      <div><span class="kicker">YETKİNLİKLER</span><h2>Uzmanlığı destekleyen<br><em>sertifikalar.</em></h2><p>Microsoft bulut, güvenlik, yapay zekâ ve Power Platform yetkinliklerini doğrulayan seçili sertifikalar.</p></div>
+      <div><span class="kicker">${escapeHtml(profile.about.certificatesEyebrow)}</span><h2>${escapeHtml(profile.about.certificatesTitle)}<br><em>${escapeHtml(profile.about.certificatesEmphasis)}</em></h2><p>${escapeHtml(profile.about.certificatesDescription)}</p></div>
       <div class="certificate-list">${certificates.map((certificate, index) => `<div><span>0${index + 1}</span><p>${escapeHtml(certificate)}</p></div>`).join("")}</div>
     </div>
   </section>`;
-  return layout({ title: "Hakkımda", description: "Cloud Engineer Beril Dindar'ın deneyimi, çalışma alanları ve sertifikaları.", active: "/hakkimda/", content, pageClass: "about-page" });
+  return layout({ title: "Hakkımda", description: profile.about.description, active: "/hakkimda/", content, pageClass: "about-page" });
 }
 
 function notFoundPage() {
