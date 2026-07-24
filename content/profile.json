@@ -15,6 +15,7 @@
     "hero": "/assests/images/favicon.jpg",
     "about": "/assests/images/profile.png",
     "avatar": "/assests/images/favicon.jpg",
+    "blogHero": "/assests/images/blog-speaking.png",
     "socialPreview": "/assests/images/profile.png",
     "favicon": "/assests/images/favicon.jpg"
   },
@@ -79,7 +80,9 @@
     "eyebrow": "TEKNİK PERSPEKTİF",
     "title": "Deneyime dayanan",
     "emphasis": "teknik yazılar.",
-    "description": "Azure, Power Platform, yapay zekâ, güvenlik ve modern mühendislik pratikleri üzerine içerikler."
+    "description": "Azure, Power Platform, yapay zekâ, güvenlik ve modern mühendislik pratikleri üzerine içerikler.",
+    "imageAlt": "Beril Dindar, OSTİM Teknik Üniversitesi'nde dijitalleşme üzerine sunum yaparken",
+    "imageCaption": "Yeni Nesil Dijitalleşme · OSTİM Teknik Üniversitesi"
   },
   "projectsPage": {
     "eyebrow": "MÜHENDİSLİK · TESLİMAT · ETKİ",

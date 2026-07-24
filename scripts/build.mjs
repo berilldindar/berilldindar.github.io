@@ -278,10 +278,16 @@ function blogPage(posts) {
   const categories = ["Tümü", ...new Set(posts.map((post) => post.category))];
   const content = `
   <section class="page-hero page-hero-blog">
-    <div class="shell narrow-shell">
-      <span class="kicker">${escapeHtml(profile.blog.eyebrow)}</span>
-      <h1>${escapeHtml(profile.blog.title)}<br><em>${escapeHtml(profile.blog.emphasis)}</em></h1>
-      <p>${escapeHtml(profile.blog.description)}</p>
+    <div class="shell blog-hero-grid">
+      <div class="blog-hero-copy">
+        <span class="kicker">${escapeHtml(profile.blog.eyebrow)}</span>
+        <h1>${escapeHtml(profile.blog.title)}<br><em>${escapeHtml(profile.blog.emphasis)}</em></h1>
+        <p>${escapeHtml(profile.blog.description)}</p>
+      </div>
+      <figure class="blog-hero-photo">
+        <img src="${escapeHtml(profile.images.blogHero)}" alt="${escapeHtml(profile.blog.imageAlt)}">
+        <figcaption>${escapeHtml(profile.blog.imageCaption)}</figcaption>
+      </figure>
     </div>
   </section>
   <section class="section shell">

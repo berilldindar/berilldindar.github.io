@@ -237,6 +237,53 @@ h1 em, h2 em { color: var(--coral); font-family: Georgia, "Times New Roman", ser
 .page-hero-blog h1 em { color: var(--blue); }
 .page-hero-projects { background: #ffd6d0; }
 .page-hero-about { background: var(--mint); }
+.blog-hero-grid {
+  min-height: 610px;
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  align-items: center;
+  gap: clamp(45px, 6vw, 90px);
+}
+.blog-hero-copy h1 { font-size: clamp(3.8rem, 6vw, 6.3rem); }
+.blog-hero-photo {
+  position: relative;
+  margin: 0;
+  padding: 8px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(143,216,255,.32);
+  border-radius: 12px;
+  box-shadow: 0 28px 70px rgba(0,0,0,.28);
+}
+.blog-hero-photo::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -18px 18px 18px -18px;
+  border: 1px solid rgba(143,216,255,.16);
+  border-radius: 14px;
+}
+.blog-hero-photo img {
+  width: 100%;
+  aspect-ratio: 1.25;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 7px;
+  filter: saturate(.78) contrast(1.04);
+}
+.blog-hero-photo figcaption {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  max-width: calc(100% - 36px);
+  padding: 8px 11px;
+  color: #d8edf9;
+  background: rgba(4,21,34,.9);
+  border: 1px solid rgba(143,216,255,.3);
+  border-radius: 4px;
+  font: 750 .68rem/1.35 ui-monospace, Consolas, monospace;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
 .blog-tools { display: flex; align-items: center; justify-content: space-between; gap: 30px; margin-bottom: 42px; }
 .search-box { display: flex; align-items: center; gap: 10px; width: min(350px, 100%); padding: 10px 16px; background: var(--white); border: 2px solid var(--ink); border-radius: 999px; box-shadow: 4px 4px 0 var(--ink); }
 .search-box span { font-size: 1.35rem; }
@@ -624,6 +671,9 @@ h1 em, h2 em {
   .hello-card { padding: 34px 25px; }
   .page-hero { padding: 75px 0 60px; }
   .page-hero h1 { font-size: clamp(3.5rem, 16vw, 5.5rem); }
+  .blog-hero-grid { min-height: auto; grid-template-columns: 1fr; gap: 44px; }
+  .blog-hero-copy h1 { font-size: clamp(3.25rem, 15vw, 5rem); }
+  .blog-hero-photo { width: min(100%, 560px); }
   .blog-tools { align-items: stretch; flex-direction: column; }
   .filter-row { justify-content: flex-start; }
   .article-header { padding: 60px 0 50px; }
