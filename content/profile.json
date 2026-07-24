@@ -37,14 +37,14 @@
     }
   ],
   "hero": {
-    "eyebrow": "CLOUD ENGINEERING · TECHNICAL LEADERSHIP",
+    "eyebrow": "ENGINEERING · TECHNICAL LEADERSHIP",
     "headlinePrefix": "Teknolojiyi",
     "headlineHighlight": "stratejiyle,",
     "headlineMiddle": "stratejiyi çalışan",
     "headlineEmphasis": "sistemlerle",
     "headlineSuffix": "buluşturuyorum.",
     "description": "Microsoft teknolojileri, güvenli bulut mimarileri ve yapay zekâ çözümleri odağında; teknik ekiplerle iş hedefleri arasında güçlü bir köprü kuruyorum.",
-    "primaryAction": "Teknik yazılar",
+    "primaryAction": "Blog",
     "secondaryAction": "Projeler ve çalışmalar",
     "socialLabel": "Profesyonel bağlantılar",
     "badges": [
@@ -62,11 +62,11 @@
     ]
   },
   "home": {
-    "writingEyebrow": "01 / TEKNİK YAZILAR",
+    "writingEyebrow": "01 / BLOG",
     "writingTitle": "Uygulamadan gelen",
     "writingEmphasis": "teknik içgörüler.",
     "writingDescription": "Bulut, yapay zekâ ve Microsoft teknolojileri üzerine; gerçek deneyimlere dayanan, uygulanabilir teknik notlar.",
-    "projectsEyebrow": "02 / SEÇİLİ ÇALIŞMALAR",
+    "projectsEyebrow": "02 / PROJELER",
     "projectsTitle": "Çözümleri uçtan uca",
     "projectsEmphasis": "hayata geçiriyorum.",
     "projectsDescription": "Bulut servislerinden kurumsal iş uygulamalarına, veri ve yapay zekâ çözümlerine uzanan teknik çalışmalar.",
@@ -95,7 +95,7 @@
     "title": "Cloud Engineer.",
     "emphasis": "Çözüm odaklı teknik lider.",
     "description": "Karmaşık teknolojileri güvenli, ölçeklenebilir ve iş hedefleriyle uyumlu çözümlere dönüştürmeye odaklanıyorum.",
-    "photoLabel": "ankara ↗ cloud",
+    "photoLabel": "AI ↗ Cloud",
     "experienceEyebrow": "DENEYİM",
     "experienceTitle": "Teknik uzmanlıktan",
     "experienceEmphasis": "ölçülebilir etkiye.",
