@@ -153,9 +153,9 @@ h1 em, h2 em { color: var(--coral); font-family: Georgia, "Times New Roman", ser
 @keyframes orbit { to { transform: rotate(360deg); } }
 .float-note, .float-code { position: absolute; z-index: 3; box-shadow: 4px 5px 0 var(--ink); border: 2px solid var(--ink); transform: rotate(-5deg); }
 .float-note { padding: 8px 13px; background: var(--white); font: 800 .82rem/1.2 ui-monospace, Consolas, monospace; }
-.note-one { top: 12%; left: 2%; }
-.note-two { right: -2%; bottom: 13%; transform: rotate(4deg); background: var(--mint); }
-.float-code { right: -1%; top: 22%; padding: 13px 17px; color: var(--white); background: var(--ink); border-radius: 13px; font: .82rem/1.45 ui-monospace, Consolas, monospace; transform: rotate(5deg); }
+.note-one { top: 8%; left: -4%; }
+.note-two { top: 8%; right: -4%; bottom: auto; transform: rotate(4deg); background: var(--mint); }
+.float-code { right: auto; bottom: 0; left: 50%; top: auto; padding: 13px 17px; color: var(--white); background: var(--ink); border-radius: 13px; font: .82rem/1.45 ui-monospace, Consolas, monospace; transform: translateX(-50%); white-space: nowrap; }
 .hero-scribble { position: absolute; border: 3px solid var(--coral); border-radius: 50%; opacity: .32; }
 .hero-scribble-one { width: 100px; height: 45px; left: 40%; top: 18%; transform: rotate(-10deg); border-color: var(--blue); }
 .hero-scribble-two { width: 160px; height: 70px; left: 3%; bottom: 10%; border-right-color: transparent; transform: rotate(15deg); }
@@ -418,7 +418,7 @@ h1 em, h2 em {
 .float-code {
   color: #83d3ff;
   background: rgba(3, 18, 31, .94);
-  transform: none;
+  transform: translateX(-50%);
   letter-spacing: .08em;
 }
 .hero-scribble { display: none; }
@@ -608,8 +608,9 @@ h1 em, h2 em {
   .hero h1 { font-size: clamp(3.15rem, 14vw, 5rem); }
   .hero-visual { min-height: 420px; grid-row: 1; }
   .portrait-ring { width: min(320px, 78vw); }
-  .float-code { right: 2%; }
-  .note-one { left: 0; }
+  .float-code { right: auto; bottom: 0; left: 50%; top: auto; }
+  .note-one { top: 5%; left: 0; }
+  .note-two { top: 5%; right: 0; }
   .social-row > span { display: none; }
   .section { padding-block: 75px; }
   .section-heading, .hello-card, .about-grid, .certificate-grid { grid-template-columns: 1fr; gap: 22px; }
