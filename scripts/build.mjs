@@ -137,7 +137,7 @@ function formatDate(value) {
 }
 
 function nav(active) {
-  const items = [["Ana Sayfa", "/"], ["Yazılar", "/blog/"], ["Projeler", "/projeler/"], ["Hakkımda", "/hakkimda/"]];
+  const items = [["Ana Sayfa", "/"], ["Blog", "/blog/"], ["Projeler", "/projeler/"], ["Hakkımda", "/hakkimda/"]];
   return `
     <a class="brand" href="/" aria-label="${escapeHtml(profile.identity.name)} ana sayfa">
       <span class="brand-mark">&lt;/&gt;</span>
@@ -148,7 +148,7 @@ function nav(active) {
     </button>
     <nav class="site-nav" aria-label="Ana menü" data-menu>
       ${items.map(([label, href]) => `<a href="${href}"${active === href ? ' aria-current="page"' : ""}>${label}</a>`).join("")}
-      <a class="nav-note" href="mailto:${escapeHtml(profile.identity.email)}">İletişime geçin <span>↗</span></a>
+      <a class="nav-note" href="mailto:${escapeHtml(profile.identity.email)}">İletişime Geçin <span>↗</span></a>
     </nav>`;
 }
 
@@ -179,7 +179,7 @@ function layout({ title, description = site.description, active = "", content, p
   <footer class="site-footer">
     <div class="shell footer-grid">
       <div><a class="brand footer-brand" href="/"><span class="brand-mark">&lt;/&gt;</span><span>${escapeHtml(profile.identity.shortName)}<span class="brand-dot">.</span></span></a><p>${escapeHtml(profile.footer.tagline)}</p></div>
-      <div class="footer-links"><a href="/blog/">Yazılar</a><a href="/projeler/">Projeler</a>${profile.socials.map((social) => `<a href="${escapeHtml(social.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(social.label)} ↗</a>`).join("")}</div>
+      <div class="footer-links"><a href="/blog/">Blog</a><a href="/projeler/">Projeler</a>${profile.socials.map((social) => `<a href="${escapeHtml(social.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(social.label)} ↗</a>`).join("")}</div>
       <p class="footer-note">© <span data-year></span> ${escapeHtml(profile.identity.name)}<br>${escapeHtml(profile.identity.location)}</p>
     </div>
   </footer>
