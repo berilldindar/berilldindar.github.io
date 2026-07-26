@@ -1,7 +1,8 @@
 {
   "site": {
     "title": "Beril Dindar",
-    "description": "Cloud engineering, Microsoft teknolojileri, yapay zekâ ve güvenli dijital çözümler üzerine teknik çalışmalar ve yazılar.",
+    "description": " AI • Microsoft • Cloud • Security • Data
+Kurumsal yapay zekâ, bulut mimarileri, güvenlik, veri platformları ve modern yazılım geliştirme üzerine teknik içerikler ve uygulama deneyimleri.",
     "url": "https://berilldindar.github.io"
   },
   "identity": {
@@ -64,35 +65,35 @@
   "home": {
     "writingEyebrow": "01 / BLOG",
     "writingTitle": "Uygulamadan gelen",
-    "writingEmphasis": "teknik içgörüler.",
+    "writingEmphasis": "teknik best practices.",
     "writingDescription": "Bulut, yapay zekâ ve Microsoft teknolojileri üzerine; gerçek deneyimlere dayanan, uygulanabilir teknik notlar.",
     "projectsEyebrow": "02 / PROJELER",
     "projectsTitle": "Çözümleri uçtan uca",
     "projectsEmphasis": "hayata geçiriyorum.",
     "projectsDescription": "Bulut servislerinden kurumsal iş uygulamalarına, veri ve yapay zekâ çözümlerine uzanan teknik çalışmalar.",
     "contactEyebrow": "İŞ BİRLİĞİ",
-    "contactTitle": "Teknik bir hedefiniz varsa",
+    "contactTitle": "Dijital dönüşüm hedefiniz varsa",
     "contactEmphasis": "birlikte değerlendirelim.",
-    "contactDescription": "Cloud, Power Platform, yapay zekâ ve teknik dönüşüm başlıklarında iletişime geçebilirsiniz.",
+    "contactDescription": "Yapay Zekâ, Cloud çözümleri, Power Platform ve teknik dönüşüm başlıklarında iletişime geçebilirsiniz.",
     "contactAction": "İletişime Geçin"
   },
   "blog": {
     "eyebrow": "TEKNİK PERSPEKTİF",
     "title": "Deneyime dayanan",
     "emphasis": "teknik yazılar.",
-    "description": "Azure, Power Platform, yapay zekâ, güvenlik ve modern mühendislik pratikleri üzerine içerikler.",
+    "description": "Yapay zekâ, Azure, Power Platform, güvenlik ve modern mühendislik pratikleri üzerine içerikler.",
     "imageAlt": "Beril Dindar, OSTİM Teknik Üniversitesi'nde dijitalleşme üzerine sunum yaparken",
     "imageCaption": "Yeni Nesil Dijitalleşme · OSTİM Teknik Üniversitesi"
   },
   "projectsPage": {
-    "eyebrow": "MÜHENDİSLİK · TESLİMAT · ETKİ",
+    "eyebrow": "MÜHENDİSLİK · DİJİTAL DÖNÜŞÜM · ETKİ",
     "title": "Seçili projeler ve",
     "emphasis": "teknik çalışmalar.",
     "description": "Kurumsal çözümlerden yapay zekâ ve görüntü işleme çalışmalarına uzanan seçili proje portföyü."
   },
   "about": {
     "eyebrow": "PROFİL",
-    "title": "Cloud Engineer.",
+    "title": "Computer Engineer.",
     "emphasis": "Çözüm odaklı teknik lider.",
     "description": "Karmaşık teknolojileri güvenli, ölçeklenebilir ve iş hedefleriyle uyumlu çözümlere dönüştürmeye odaklanıyorum.",
     "photoLabel": "AI ↗ Cloud",
@@ -102,9 +103,9 @@
     "certificatesEyebrow": "YETKİNLİKLER",
     "certificatesTitle": "Uzmanlığı destekleyen",
     "certificatesEmphasis": "sertifikalar.",
-    "certificatesDescription": "Microsoft bulut, güvenlik, yapay zekâ ve Power Platform yetkinliklerini doğrulayan seçili sertifikalar."
+    "certificatesDescription": "Yapay zekâ, Microsoft bulut, güvenlik ve Power Platform yetkinliklerini doğrulayan seçili sertifikalar."
   },
   "footer": {
-    "tagline": "Cloud engineering · Technical delivery · Continuous learning"
+    "tagline": "Cloud Engineering · Technical Delivery · Continuous Learning"
   }
 }
