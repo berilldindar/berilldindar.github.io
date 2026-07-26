@@ -50,5 +50,30 @@
       "url": "https://www.linkedin.com/feed/update/urn:li:activity:7461392334166036480/"
     }
   ]
+},
+   {
+  "title": "Low Code & No Code ile Dijital Dönüşüm",
+  "organization": "Ford Otosan",
+  "date": "2024-07-25",
+  "type": "Kurumsal Eğitim",
+  "location": "Kocaeli",
+  "description": "Ford Otosan Teknik Eğitim Ekibi iş birliğiyle gerçekleştirilen Low Code & No Code eğitim programı kapsamında iki farklı oturumda yaklaşık 300 katılımcıya ulaşıldı. Eğitimde Microsoft Power Platform ekosistemi, low-code geliştirme yaklaşımı, iş süreçlerinin dijitalleştirilmesi ve gerçek kurumsal kullanım senaryoları uygulamalı olarak ele alındı.",
+  "image": "/assests/images/FordOtosan.jpg",
+  "imageFit": "cover",
+  "imageAlt": "Beril Dindar, Ford Otosan'da Low Code & No Code eğitimi verirken",
+  "topics": [
+    "Power Platform",
+    "Power Apps",
+    "Power Automate",
+    "Low Code",
+    "No Code",
+    "Digital Transformation"
+  ],
+  "links": [
+    {
+      "label": "LinkedIn paylaşımını görüntüle",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7242203821391724544/"
+    }
+  ]
 }
 ]
