@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Yeni Nesil Dijitalleşme: Low-Code & No-Code",
+    "organization": "OSTİM Teknik Üniversitesi",
+    "date": "2025-12-16",
+    "type": "Üniversite Sunumu",
+    "location": "Ankara",
+    "description": "Low-code ve no-code yaklaşımlarının kurumların dijital dönüşüm süreçlerine etkisi, Power Platform ekosistemi ve gerçek uygulama senaryoları üzerine bir sunum.",
+    "image": "/assests/images/blog-speaking.png",
+    "imageAlt": "Beril Dindar, OSTİM Teknik Üniversitesi'nde Low-Code ve No-Code üzerine sunum yaparken",
+    "topics": [
+      "Low-Code",
+      "No-Code",
+      "Power Platform",
+      "Dijital Dönüşüm"
+    ]
+  }
+]

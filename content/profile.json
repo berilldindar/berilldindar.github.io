@@ -93,6 +93,15 @@
     "imageAlt": "Beril Dindar, ThreatIQ yapay zekâ destekli tehdit tespit platformunu tanıtırken",
     "imageCaption": "ThreatIQ · AI-POWERED THREAT DETECTION"
   },
+  "talksPage": {
+    "eyebrow": "WEBINAR · KONFERANS · SUNUM",
+    "title": "Bilgiyi paylaşan",
+    "emphasis": "teknik konuşmalar.",
+    "description": "Teknoloji, dijital dönüşüm ve modern mühendislik pratikleri üzerine gerçekleştirdiğim webinar, konferans ve sunumlardan seçkiler.",
+    "listEyebrow": "ETKİNLİK ARŞİVİ",
+    "listTitle": "Sahadan gelen deneyimi",
+    "listEmphasis": "toplulukla buluşturuyorum."
+  },
   "about": {
     "eyebrow": "PROFİL",
     "title": "Computer Engineer.",

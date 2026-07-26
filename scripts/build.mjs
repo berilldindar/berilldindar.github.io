@@ -16,6 +16,7 @@ async function readJson(filename) {
 
 const profile = await readJson("profile.json");
 const projects = await readJson("projects.json");
+const talks = await readJson("talks.json");
 const experience = await readJson("experience.json");
 const certificates = await readJson("certificates.json");
 const site = profile.site;
@@ -137,7 +138,7 @@ function formatDate(value) {
 }
 
 function nav(active) {
-  const items = [["Ana Sayfa", "/"], ["Blog", "/blog/"], ["Projeler", "/projeler/"], ["Hakkımda", "/hakkimda/"]];
+  const items = [["Ana Sayfa", "/"], ["Blog", "/blog/"], ["Projeler", "/projeler/"], ["Konuşmalar", "/konusmalar/"], ["Hakkımda", "/hakkimda/"]];
   return `
     <a class="brand" href="/" aria-label="${escapeHtml(profile.identity.name)} ana sayfa">
       <span class="brand-mark">&lt;/&gt;</span>
@@ -179,7 +180,7 @@ function layout({ title, description = site.description, active = "", content, p
   <footer class="site-footer">
     <div class="shell footer-grid">
       <div><a class="brand footer-brand" href="/"><span class="brand-mark">&lt;/&gt;</span><span>${escapeHtml(profile.identity.shortName)}<span class="brand-dot">.</span></span></a><p>${escapeHtml(profile.footer.tagline)}</p></div>
-      <div class="footer-links"><a href="/blog/">Blog</a><a href="/projeler/">Projeler</a>${profile.socials.map((social) => `<a href="${escapeHtml(social.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(social.label)} ↗</a>`).join("")}</div>
+      <div class="footer-links"><a href="/blog/">Blog</a><a href="/projeler/">Projeler</a><a href="/konusmalar/">Konuşmalar</a>${profile.socials.map((social) => `<a href="${escapeHtml(social.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(social.label)} ↗</a>`).join("")}</div>
       <p class="footer-note">© <span data-year></span> ${escapeHtml(profile.identity.name)}<br>${escapeHtml(profile.identity.location)}</p>
     </div>
   </footer>
@@ -341,6 +342,34 @@ function projectsPage() {
   return layout({ title: "Projeler", description: profile.projectsPage.description, active: "/projeler/", content, pageClass: "projects-page" });
 }
 
+function talkCard(talk, index) {
+  return `<article class="talk-card">
+    <figure class="talk-photo"><img src="${escapeHtml(talk.image)}" alt="${escapeHtml(talk.imageAlt)}" loading="lazy"></figure>
+    <div class="talk-content">
+      <div class="talk-meta"><span>0${index + 1}</span><span>${escapeHtml(talk.type)}</span><time datetime="${escapeHtml(talk.date)}">${formatDate(talk.date)}</time></div>
+      <h2>${escapeHtml(talk.title)}</h2>
+      <p class="talk-organization">${escapeHtml(talk.organization)} · ${escapeHtml(talk.location)}</p>
+      <p>${escapeHtml(talk.description)}</p>
+      ${tagList(talk.topics)}
+    </div>
+  </article>`;
+}
+
+function talksPage() {
+  const content = `
+  <section class="page-hero page-hero-talks">
+    <div class="shell talks-hero-grid">
+      <div><span class="kicker">${escapeHtml(profile.talksPage.eyebrow)}</span><h1>${escapeHtml(profile.talksPage.title)}<br><em>${escapeHtml(profile.talksPage.emphasis)}</em></h1><p>${escapeHtml(profile.talksPage.description)}</p></div>
+      <div class="talks-summary" aria-label="Konuşma özeti"><strong>${String(talks.length).padStart(2, "0")}</strong><span>yayınlanan<br>etkinlik</span></div>
+    </div>
+  </section>
+  <section class="section shell">
+    <div class="section-heading"><div><span class="kicker">${escapeHtml(profile.talksPage.listEyebrow)}</span><h2>${escapeHtml(profile.talksPage.listTitle)}<br><em>${escapeHtml(profile.talksPage.listEmphasis)}</em></h2></div></div>
+    <div class="talks-list">${talks.map(talkCard).join("")}</div>
+  </section>`;
+  return layout({ title: "Konuşmalar", description: profile.talksPage.description, active: "/konusmalar/", content, pageClass: "talks-page" });
+}
+
 function aboutPage() {
   const content = `
   <section class="page-hero page-hero-about">
@@ -388,6 +417,7 @@ export async function build() {
   await output("", homePage(posts));
   await output("blog", blogPage(posts));
   await output("projeler", projectsPage());
+  await output("konusmalar", talksPage());
   await output("hakkimda", aboutPage());
   for (const post of posts) await output(join("blog", post.slug), postPage(post));
   await writeFile(join(dist, "404.html"), notFoundPage(), "utf8");
@@ -400,7 +430,7 @@ export async function build() {
   const rssItems = posts.map((post) => `<item><title>${escapeHtml(post.title)}</title><link>${site.url}/blog/${post.slug}/</link><guid>${site.url}/blog/${post.slug}/</guid><pubDate>${new Date(`${post.date}T12:00:00Z`).toUTCString()}</pubDate><description>${escapeHtml(post.description)}</description></item>`).join("");
   await writeFile(join(dist, "feed.xml"), `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>${site.title}</title><link>${site.url}</link><description>${site.description}</description>${rssItems}</channel></rss>`, "utf8");
 
-  const urls = ["/", "/blog/", "/projeler/", "/hakkimda/", ...posts.map((post) => `/blog/${post.slug}/`)];
+  const urls = ["/", "/blog/", "/projeler/", "/konusmalar/", "/hakkimda/", ...posts.map((post) => `/blog/${post.slug}/`)];
   await writeFile(join(dist, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map((url) => `<url><loc>${site.url}${url}</loc></url>`).join("")}</urlset>`, "utf8");
   await writeFile(join(dist, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: ${site.url}/sitemap.xml\n`, "utf8");
   await writeFile(join(dist, ".nojekyll"), "", "utf8");
