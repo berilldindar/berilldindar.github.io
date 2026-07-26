@@ -36,7 +36,10 @@
     "Enterprise AI"
   ],
   "links": [
-    "https://www.linkedin.com/feed/update/urn:li:activity:7461392334166036480/"
+    {
+      "label": "LinkedIn paylaşımını görüntüle",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7461392334166036480/"
+    }
   ]
 }
 ]

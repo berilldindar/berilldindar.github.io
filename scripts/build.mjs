@@ -345,6 +345,13 @@ function projectsPage() {
 
 function talkCard(talk, index) {
   const links = talk.links || [];
+  const linkItems = links.map((link) => {
+    const url = typeof link === "string" ? link : link?.url;
+    if (!url) return "";
+    const defaultLabel = String(url).includes("linkedin.com") ? "LinkedIn paylaşımını görüntüle" : "Bağlantıyı aç";
+    const label = typeof link === "string" ? defaultLabel : link.label || defaultLabel;
+    return `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)} <span>↗</span></a>`;
+  }).filter(Boolean);
   const imageFit = talk.imageFit === "cover" ? "cover" : "contain";
   return `<article class="talk-card" data-talk-card data-category="${escapeHtml(talk.type)}" data-search="${escapeHtml([talk.title, talk.organization, talk.location, ...(talk.topics || [])].join(" "))}">
     <figure class="talk-poster talk-poster-${imageFit}"><img src="${escapeHtml(talk.image)}" alt="${escapeHtml(talk.imageAlt)}" loading="lazy"></figure>
@@ -354,7 +361,7 @@ function talkCard(talk, index) {
       <p class="talk-organization">${escapeHtml(talk.organization)} · ${escapeHtml(talk.location)}</p>
       <p>${escapeHtml(talk.description)}</p>
       ${tagList(talk.topics)}
-      ${links.length ? `<div class="talk-actions">${links.map((link) => `<a href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.label)} <span>↗</span></a>`).join("")}</div>` : ""}
+      ${linkItems.length ? `<div class="talk-actions">${linkItems.join("")}</div>` : ""}
     </div>
   </article>`;
 }
