@@ -109,7 +109,7 @@
   "type": "Üniversite Konferans",
   "location": "Ankara Üniversitesi",
   "description": "D Tech Cloud ve Ankara Üniversitesi iş birliğiyle düzenlenen uygulamalı workshop'ta yapay zekâ, low-code teknolojileri ve bulut çözümleri ele alındı. Etkinlikte Microsoft Power Platform, AI destekli uygulama geliştirme, kod yazmadan çözüm üretme yaklaşımları ve gerçek dünya kullanım senaryoları öğrencilere ve teknopark girişimlerine uygulamalı örneklerle aktarıldı.",
-  "image": "/assests/images/AnkaraUniversitesiWorkshop.jpeg",
+  "image": "/assests/images/AnkaraUniversitesiWorkshop.jpg",
   "imageFit": "cover",
   "imageAlt": "Beril Dindar, Ankara Üniversitesi'nde AI & Low-Code Cloud Workshop kapsamında sunum gerçekleştirirken",
   "topics": [
