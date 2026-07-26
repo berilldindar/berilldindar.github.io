@@ -16,6 +16,7 @@
     "about": "/assests/images/profile.png",
     "avatar": "/assests/images/favicon.jpg",
     "blogHero": "/assests/images/blog-speaking.png",
+    "projectsHero": "/assests/images/projects/threatiq-hero.png",
     "socialPreview": "/assests/images/profile.png",
     "favicon": "/assests/images/favicon.jpg"
   },
@@ -88,7 +89,9 @@
     "eyebrow": "MÜHENDİSLİK · DİJİTAL DÖNÜŞÜM · ETKİ",
     "title": "Seçili projeler ve",
     "emphasis": "teknik çalışmalar.",
-    "description": "Kurumsal çözümlerden yapay zekâ ve görüntü işleme çalışmalarına uzanan seçili proje portföyü."
+    "description": "Kurumsal çözümlerden yapay zekâ ve görüntü işleme çalışmalarına uzanan seçili proje portföyü.",
+    "imageAlt": "Beril Dindar, ThreatIQ yapay zekâ destekli tehdit tespit platformunu tanıtırken",
+    "imageCaption": "ThreatIQ · AI-Powered Threat Detection"
   },
   "about": {
     "eyebrow": "PROFİL",

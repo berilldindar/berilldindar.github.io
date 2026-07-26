@@ -329,7 +329,13 @@ function postPage(post) {
 function projectsPage() {
   const content = `
   <section class="page-hero page-hero-projects">
-    <div class="shell narrow-shell"><span class="kicker">${escapeHtml(profile.projectsPage.eyebrow)}</span><h1>${escapeHtml(profile.projectsPage.title)}<br><em>${escapeHtml(profile.projectsPage.emphasis)}</em></h1><p>${escapeHtml(profile.projectsPage.description)}</p></div>
+    <div class="shell project-hero-grid">
+      <div class="project-hero-copy"><span class="kicker">${escapeHtml(profile.projectsPage.eyebrow)}</span><h1>${escapeHtml(profile.projectsPage.title)}<br><em>${escapeHtml(profile.projectsPage.emphasis)}</em></h1><p>${escapeHtml(profile.projectsPage.description)}</p></div>
+      <figure class="project-hero-photo">
+        <img src="${escapeHtml(profile.images.projectsHero)}" alt="${escapeHtml(profile.projectsPage.imageAlt)}">
+        <figcaption>${escapeHtml(profile.projectsPage.imageCaption)}</figcaption>
+      </figure>
+    </div>
   </section>
   <section class="section shell"><div class="projects-list">${projects.map(projectCard).join("")}</div></section>`;
   return layout({ title: "Projeler", description: profile.projectsPage.description, active: "/projeler/", content, pageClass: "projects-page" });

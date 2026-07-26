@@ -237,15 +237,18 @@ h1 em, h2 em { color: var(--coral); font-family: Georgia, "Times New Roman", ser
 .page-hero-blog h1 em { color: var(--blue); }
 .page-hero-projects { background: #ffd6d0; }
 .page-hero-about { background: var(--mint); }
-.blog-hero-grid {
+.blog-hero-grid,
+.project-hero-grid {
   min-height: 610px;
   display: grid;
   grid-template-columns: 1.08fr .92fr;
   align-items: center;
   gap: clamp(45px, 6vw, 90px);
 }
-.blog-hero-copy h1 { font-size: clamp(3.8rem, 6vw, 6.3rem); }
-.blog-hero-photo {
+.blog-hero-copy h1,
+.project-hero-copy h1 { font-size: clamp(3.8rem, 6vw, 6.3rem); }
+.blog-hero-photo,
+.project-hero-photo {
   position: relative;
   margin: 0;
   padding: 8px;
@@ -254,7 +257,8 @@ h1 em, h2 em { color: var(--coral); font-family: Georgia, "Times New Roman", ser
   border-radius: 12px;
   box-shadow: 0 28px 70px rgba(0,0,0,.28);
 }
-.blog-hero-photo::before {
+.blog-hero-photo::before,
+.project-hero-photo::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -262,7 +266,8 @@ h1 em, h2 em { color: var(--coral); font-family: Georgia, "Times New Roman", ser
   border: 1px solid rgba(143,216,255,.16);
   border-radius: 14px;
 }
-.blog-hero-photo img {
+.blog-hero-photo img,
+.project-hero-photo img {
   width: 100%;
   aspect-ratio: 1.25;
   object-fit: cover;
@@ -270,7 +275,9 @@ h1 em, h2 em { color: var(--coral); font-family: Georgia, "Times New Roman", ser
   border-radius: 7px;
   filter: saturate(.78) contrast(1.04);
 }
-.blog-hero-photo figcaption {
+.project-hero-photo img { aspect-ratio: 1; }
+.blog-hero-photo figcaption,
+.project-hero-photo figcaption {
   position: absolute;
   right: 18px;
   bottom: 18px;
@@ -671,9 +678,9 @@ h1 em, h2 em {
   .hello-card { padding: 34px 25px; }
   .page-hero { padding: 75px 0 60px; }
   .page-hero h1 { font-size: clamp(3.5rem, 16vw, 5.5rem); }
-  .blog-hero-grid { min-height: auto; grid-template-columns: 1fr; gap: 44px; }
-  .blog-hero-copy h1 { font-size: clamp(3.25rem, 15vw, 5rem); }
-  .blog-hero-photo { width: min(100%, 560px); }
+  .blog-hero-grid, .project-hero-grid { min-height: auto; grid-template-columns: 1fr; gap: 44px; }
+  .blog-hero-copy h1, .project-hero-copy h1 { font-size: clamp(3.25rem, 15vw, 5rem); }
+  .blog-hero-photo, .project-hero-photo { width: min(100%, 560px); }
   .blog-tools { align-items: stretch; flex-direction: column; }
   .filter-row { justify-content: flex-start; }
   .article-header { padding: 60px 0 50px; }
