@@ -56,7 +56,7 @@
   "organization": "Ford Otosan",
   "date": "2024-07-25",
   "type": "Kurumsal Eğitim",
-  "location": "Kocaeli",
+  "location": "Kocaeli - Online",
   "description": "Ford Otosan Teknik Eğitim Ekibi iş birliğiyle gerçekleştirilen Low Code & No Code eğitim programı kapsamında iki farklı oturumda yaklaşık 300 katılımcıya ulaşıldı. Eğitimde Microsoft Power Platform ekosistemi, low-code geliştirme yaklaşımı, iş süreçlerinin dijitalleştirilmesi ve gerçek kurumsal kullanım senaryoları uygulamalı olarak ele alındı.",
   "image": "/assests/images/FordOtosan.png",
   "imageFit": "cover",
@@ -73,6 +73,32 @@
     {
       "label": "LinkedIn paylaşımını görüntüle",
       "url": "https://www.linkedin.com/feed/update/urn:li:activity:7242203821391724544/"
+    }
+  ]
+},
+  {
+  "title": "Power Platform Low Code & No Code",
+  "organization": "Workplace Ninja Türkiye",
+  "date": "2025-02-15",
+  "type": "Topluluk Konuşması",
+  "location": "Online",
+  "description": "Workplace Ninja Türkiye topluluğunda gerçekleştirilen canlı oturumda Microsoft Power Platform ekosistemi, Low Code & No Code geliştirme yaklaşımı ve kurumsal dijital dönüşüm senaryoları ele alındı. Oturumda Power Apps, Power Automate ve Power BI ile geliştirilen gerçek kullanım örnekleri paylaşılırken, low-code teknolojilerinin kurumlarda inovasyonu ve geliştirme süreçlerini nasıl hızlandırdığı uygulamalı olarak anlatıldı.",
+  "image": "/assests/images/WorkplaceNinja.png",
+  "imageFit": "cover",
+  "imageAlt": "Beril Dindar, Workplace Ninja Türkiye etkinliğinde Power Platform Low Code & No Code sunumu gerçekleştirirken",
+  "topics": [
+    "Power Platform",
+    "Power Apps",
+    "Power Automate",
+    "Power BI",
+    "Low Code",
+    "No Code",
+    "Digital Transformation"
+  ],
+  "links": [
+    {
+      "label": "LinkedIn paylaşımını görüntüle",
+      "url": "https://www.linkedin.com/posts/wnugtr_workplace-ninjas-cloud-activity-7281983359591813120-9Feb?utm_source=share&utm_medium=member_desktop&rcm=ACoAACcVfhMBdvwm_YdjW8hGqsOrnI60M3J1O80"
     }
   ]
 }
