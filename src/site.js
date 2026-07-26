@@ -40,6 +40,34 @@ filterButtons.forEach((button) => {
 
 searchInput?.addEventListener("input", filterPosts);
 
+const talkFilterButtons = [...document.querySelectorAll("[data-talk-filter]")];
+const talkCards = [...document.querySelectorAll("[data-talk-card]")];
+const talkSearchInput = document.querySelector("[data-talk-search]");
+let activeTalkFilter = "Tümü";
+
+function filterTalks() {
+  const query = (talkSearchInput?.value || "").trim().toLocaleLowerCase("tr");
+
+  talkCards.forEach((card) => {
+    const matchesType = activeTalkFilter === "Tümü" || card.dataset.category === activeTalkFilter;
+    const matchesSearch = !query || (card.dataset.search || "").toLocaleLowerCase("tr").includes(query);
+    card.hidden = !(matchesType && matchesSearch);
+  });
+
+  const empty = document.querySelector("[data-talk-empty]");
+  if (empty) empty.hidden = talkCards.some((card) => !card.hidden);
+}
+
+talkFilterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    activeTalkFilter = button.dataset.talkFilter;
+    talkFilterButtons.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+    filterTalks();
+  });
+});
+
+talkSearchInput?.addEventListener("input", filterTalks);
+
 const progress = document.querySelector("[data-reading-progress]");
 if (progress) {
   const updateProgress = () => {

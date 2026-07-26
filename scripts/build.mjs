@@ -17,6 +17,7 @@ async function readJson(filename) {
 const profile = await readJson("profile.json");
 const projects = await readJson("projects.json");
 const talks = await readJson("talks.json");
+talks.sort((a, b) => String(b.date).localeCompare(String(a.date)));
 const experience = await readJson("experience.json");
 const certificates = await readJson("certificates.json");
 const site = profile.site;
@@ -343,19 +344,23 @@ function projectsPage() {
 }
 
 function talkCard(talk, index) {
-  return `<article class="talk-card">
-    <figure class="talk-photo"><img src="${escapeHtml(talk.image)}" alt="${escapeHtml(talk.imageAlt)}" loading="lazy"></figure>
+  const links = talk.links || [];
+  const imageFit = talk.imageFit === "cover" ? "cover" : "contain";
+  return `<article class="talk-card" data-talk-card data-category="${escapeHtml(talk.type)}" data-search="${escapeHtml([talk.title, talk.organization, talk.location, ...(talk.topics || [])].join(" "))}">
+    <figure class="talk-poster talk-poster-${imageFit}"><img src="${escapeHtml(talk.image)}" alt="${escapeHtml(talk.imageAlt)}" loading="lazy"></figure>
     <div class="talk-content">
-      <div class="talk-meta"><span>0${index + 1}</span><span>${escapeHtml(talk.type)}</span><time datetime="${escapeHtml(talk.date)}">${formatDate(talk.date)}</time></div>
-      <h2>${escapeHtml(talk.title)}</h2>
+      <div class="talk-meta"><span>${escapeHtml(talk.type)}</span><time datetime="${escapeHtml(talk.date)}">${formatDate(talk.date)}</time></div>
+      <h2><span class="talk-number">${String(index + 1).padStart(2, "0")}</span>${escapeHtml(talk.title)}</h2>
       <p class="talk-organization">${escapeHtml(talk.organization)} · ${escapeHtml(talk.location)}</p>
       <p>${escapeHtml(talk.description)}</p>
       ${tagList(talk.topics)}
+      ${links.length ? `<div class="talk-actions">${links.map((link) => `<a href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.label)} <span>↗</span></a>`).join("")}</div>` : ""}
     </div>
   </article>`;
 }
 
 function talksPage() {
+  const types = ["Tümü", ...new Set(talks.map((talk) => talk.type))];
   const content = `
   <section class="page-hero page-hero-talks">
     <div class="shell talks-hero-grid">
@@ -365,7 +370,12 @@ function talksPage() {
   </section>
   <section class="section shell">
     <div class="section-heading"><div><span class="kicker">${escapeHtml(profile.talksPage.listEyebrow)}</span><h2>${escapeHtml(profile.talksPage.listTitle)}<br><em>${escapeHtml(profile.talksPage.listEmphasis)}</em></h2></div></div>
+    <div class="talks-tools">
+      <label class="search-box"><span aria-hidden="true">⌕</span><input type="search" placeholder="Etkinlik, kurum veya konu ara" aria-label="Konuşmalarda ara" data-talk-search></label>
+      <div class="filter-row" aria-label="Etkinlik türleri">${types.map((type, index) => `<button type="button" data-talk-filter="${escapeHtml(type)}" aria-pressed="${index === 0}">${escapeHtml(type)}</button>`).join("")}</div>
+    </div>
     <div class="talks-list">${talks.map(talkCard).join("")}</div>
+    <div class="empty-state" data-talk-empty hidden><span>—</span><h2>Eşleşen etkinlik bulunamadı.</h2><p>Başka bir arama veya etkinlik türü deneyebilirsiniz.</p></div>
   </section>`;
   return layout({ title: "Konuşmalar", description: profile.talksPage.description, active: "/konusmalar/", content, pageClass: "talks-page" });
 }
