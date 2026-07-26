@@ -101,5 +101,34 @@
       "url": "https://www.linkedin.com/posts/wnugtr_workplace-ninjas-cloud-activity-7281983359591813120-9Feb?utm_source=share&utm_medium=member_desktop&rcm=ACoAACcVfhMBdvwm_YdjW8hGqsOrnI60M3J1O80"
     }
   ]
+},
+  {
+  "title": "AI & Low-Code Cloud Workshop",
+  "organization": "Ankara Üniversitesi & D Tech Cloud",
+  "date": "2025-05-15",
+  "type": "Üniversite Konferans",
+  "location": "Ankara Üniversitesi",
+  "description": "D Tech Cloud ve Ankara Üniversitesi iş birliğiyle düzenlenen uygulamalı workshop'ta yapay zekâ, low-code teknolojileri ve bulut çözümleri ele alındı. Etkinlikte Microsoft Power Platform, AI destekli uygulama geliştirme, kod yazmadan çözüm üretme yaklaşımları ve gerçek dünya kullanım senaryoları öğrencilere ve teknopark girişimlerine uygulamalı örneklerle aktarıldı.",
+  "image": "/assests/images/AnkaraUniversitesiWorkshop.jpeg",
+  "imageFit": "cover",
+  "imageAlt": "Beril Dindar, Ankara Üniversitesi'nde AI & Low-Code Cloud Workshop kapsamında sunum gerçekleştirirken",
+  "topics": [
+    "Artificial Intelligence",
+    "Power Platform",
+    "Low Code",
+    "Cloud Computing",
+    "Microsoft Azure",
+    "Digital Transformation"
+  ],
+  "links": [
+    {
+      "label": "LinkedIn paylaşımını görüntüle",
+      "url": "https://www.linkedin.com/posts/dtech-cloud_dtechcloud-yapayzeka-lowcode-activity-7328003082208858112-kaN0?utm_source=share&utm_medium=member_desktop&rcm=ACoAACcVfhMBdvwm_YdjW8hGqsOrnI60M3J1O80" ,
+      "label": "Medyada Beril Dindar",
+      "url": "https://www.milliyet.com.tr/teknoloji/d-tech-clouddan-gelecege-acilan-teknoloji-atolyesi-7373105",
+      "label": "LinkedIn paylaşımını görüntüle",
+      "url": "https://www.linkedin.com/posts/dtech-cloud_dtechcloud-yapayzeka-lowcode-ugcPost-7329128159193284609-jxy7?utm_source=share&utm_medium=member_desktop&rcm=ACoAACcVfhMBdvwm_YdjW8hGqsOrnI60M3J1O80",
+    }
+  ]
 }
 ]
