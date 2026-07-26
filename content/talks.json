@@ -16,5 +16,27 @@
       "Dijital Dönüşüm"
     ],
     "links": []
-  }
+  },
+  {
+  "title": "Agentic AI & AI Governance: Agentic AI Çağında Kurumsal Zekâ",
+  "organization": "Mudanya Üniversitesi - TechFest 2026",
+  "date": "2026-05-15",
+  "type": "Üniversite Konuşması",
+  "location": "Bursa",
+  "description": "Agentic AI, AI Governance ve kurumsal yapay zekâ ekosistemleri üzerine gerçekleştirilen teknik sunum. Kurumlarda yapay zekâ ajanlarının tasarımı, orkestrasyonu, güvenliği, yönetişimi ve Responsible AI yaklaşımları gerçek proje deneyimleriyle ele alındı.",
+  "image": "/assests/images/MudanyaTechFest.png",
+  "imageFit": "cover",
+  "imageAlt": "Beril Dindar, Mudanya Üniversitesi TechFest 2026'da Agentic AI ve AI Governance üzerine sunum yaparken",
+  "topics": [
+    "Agentic AI",
+    "AI Governance",
+    "Azure AI Foundry",
+    "Copilot Studio",
+    "Responsible AI",
+    "Enterprise AI"
+  ],
+  "links": [
+    "https://www.linkedin.com/feed/update/urn:li:activity:7461392334166036480/"
+  ]
+}
 ]
