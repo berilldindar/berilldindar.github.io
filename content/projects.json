@@ -1,5 +1,12 @@
 [
   {
+    "title": "AgentOps Governance Platform",
+    "description": "Kurumsal yapay zekâ ajanlarının merkezi olarak yönetilmesi, izlenmesi ve yönetişimi için geliştirilen platform. Agent envanteri, model ve araç yönetimi, token kullanımı, güvenlik, uyumluluk ve performans metriklerini tek panel üzerinden sunar.",
+    "image": "/assests/images/projects/proje9.png",
+    "tags": ["AI Governance", "Microsoft Foundry", "Compliance"],
+    "note": "AR-GE Projesi"
+  },
+  {
     "title": "HR Benefit Management",
     "description": "Power Apps ve SharePoint ile çok kiracılı yapıda tasarlanmış yan hak yönetim deneyimi.",
     "image": "/assests/images/projects/proje1.png",
