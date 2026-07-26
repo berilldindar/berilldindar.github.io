@@ -7,6 +7,20 @@
     "note": "AR-GE Projesi"
   },
   {
+  "title": "NATO Vision: AI-Orchestrated Secure Cloud",
+  "description": "AI-Orchestrated Secure Cloud vizyonu NATO 3. Bulut Konferansı kapsamında geliştirilen vizyon. Self-defending security agents, AI destekli tehdit yaşam döngüsü yönetimi, otonom yönetişim ve birleşik güvenlik görünürlüğü sağlayan, Zero Trust ve Responsible AI prensipleri üzerine tasarlanmış yapay zekâ odaklı güvenlik mimarisi.",
+  "image": "/assests/images/projects/proje10.png",
+  "tags": [
+    "AI Security",
+    "AI Governance",
+    "Microsoft Foundry",
+    "Zero Trust",
+    "NIST AI RMF",
+    "EU AI Act"
+  ],
+  "note": "NATO Cloud Conference 2025"
+},
+  {
     "title": "HR Benefit Management",
     "description": "Power Apps ve SharePoint ile çok kiracılı yapıda tasarlanmış yan hak yönetim deneyimi.",
     "image": "/assests/images/projects/proje1.png",
