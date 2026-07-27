@@ -159,5 +159,33 @@
       "url": "https://www.youtube.com/live/JgSF9OjRolY"
     }
   ]
+},
+  {
+  "title": "Mentör Buluşmaları II: Yapay Zekâ ve Dijital Dönüşüm",
+  "organization": "Ankara Sosyal Bilimler Üniversitesi",
+  "date": "2026-05-21",
+  "type": "Mentör Buluşması",
+  "location": "Ankara",
+  "description": "Ankara Sosyal Bilimler Üniversitesi Mentör Buluşmaları II kapsamında öğrencilerle kariyer yolculuğu, yapay zekâ ve Microsoft Power Platform teknolojileri üzerine bir araya geldik. Oturumda AI, Power BI, Power Apps, Power Automate ve Microsoft Copilot çözümlerinin kurumsal kullanım senaryoları, low-code/no-code yaklaşımları ve dijital dönüşüm süreçlerine sağladığı katma değer gerçek proje örnekleriyle paylaşıldı.",
+  "image": "/assests/images/ASBU.jpeg",
+  "imageFit": "cover",
+  "imageAlt": "Beril Dindar, Ankara Sosyal Bilimler Üniversitesi Mentör Buluşmaları II etkinliğinde öğrencilerle yapay zekâ ve dijital dönüşüm üzerine konuşurken",
+  "topics": [
+    "Artificial Intelligence",
+    "Microsoft Power Platform",
+    "Microsoft Copilot",
+    "Power BI",
+    "Power Apps",
+    "Power Automate",
+    "Low Code",
+    "Digital Transformation",
+    "Career Development"
+  ],
+  "links": [
+    {
+      "label": "LinkedIn paylaşımını görüntüle",
+      "url": "https://www.linkedin.com/posts/berildindar_mentaemrbuluagnmalaraft-asbu-iaovagnvekon-activity-7408831637477740544-5z3f?utm_source=share&utm_medium=member_desktop&rcm=ACoAACcVfhMBdvwm_YdjW8hGqsOrnI60M3J1O80"
+    }
+  ]
 }
 ]
