@@ -130,5 +130,34 @@
       "url": "https://www.linkedin.com/posts/dtech-cloud_dtechcloud-yapayzeka-lowcode-ugcPost-7329128159193284609-jxy7?utm_source=share&utm_medium=member_desktop&rcm=ACoAACcVfhMBdvwm_YdjW8hGqsOrnI60M3J1O80"
     }
   ]
+},
+  {
+  "title": "Designing the Future: From Citizen Development to Autonomous AI Systems",
+  "organization": "HSD OSTİMTECH",
+  "date": "2026-04-29",
+  "type": "Webinar",
+  "location": "Online",
+  "description": "HSD OSTİMTECH tarafından düzenlenen teknik seminerde, citizen development yaklaşımından otonom yapay zekâ sistemlerine uzanan teknolojik dönüşüm ele alındı. Oturumda Agentic AI, AI ajanları, Microsoft ekosistemindeki gelişmeler, kurumsal kullanım senaryoları ve yapay zekâ alanındaki kariyer fırsatları gerçek proje deneyimleriyle birlikte paylaşıldı.",
+  "image": "/assests/images/HSDOstimTech.png",
+  "imageFit": "cover",
+  "imageAlt": "Beril Dindar, HSD OSTİMTECH etkinliğinde 'Designing the Future: From Citizen Development to Autonomous AI Systems' başlıklı sunumu gerçekleştirirken",
+  "topics": [
+    "Agentic AI",
+    "Autonomous AI",
+    "Citizen Development",
+    "Microsoft Power Platform",
+    "AI Governance",
+    "Career in AI"
+  ],
+  "links": [
+    {
+      "label": "Etkinlik duyurusunu görüntüle",
+      "url": "https://lnkd.in/d6N5CFaF"
+    },
+    {
+      "label": "Youtube videosunu izle",
+      "url": "https://www.youtube.com/live/JgSF9OjRolY"
+    }
+  ]
 }
 ]
