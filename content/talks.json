@@ -187,5 +187,31 @@
       "url": "https://www.linkedin.com/posts/berildindar_mentaemrbuluagnmalaraft-asbu-iaovagnvekon-activity-7408831637477740544-5z3f?utm_source=share&utm_medium=member_desktop&rcm=ACoAACcVfhMBdvwm_YdjW8hGqsOrnI60M3J1O80"
     }
   ]
+},
+  {
+  "title": "Copilot & Copilot Agents ile Kurumsal Zekânın Yeni Dönemi",
+  "organization": "D Tech Cloud, Microsoft & Logosoft Bilişim Teknolojileri A.Ş.",
+  "date": "2025-05-21",
+  "type": "Webinar",
+  "location": "Online (Microsoft Teams)",
+  "description": "D Tech Cloud, Microsoft ve Logosoft iş birliğiyle düzenlenen webinarda Microsoft Copilot ve Copilot Agents teknolojilerinin kurumsal iş süreçlerine entegrasyonu ele alındı. Oturumda Microsoft 365 Copilot, Agentic AI yaklaşımı, üretken yapay zekâ senaryoları ve Copilot Agents ile süreç otomasyonu gerçek kullanım örnekleri ve canlı demolar eşliğinde katılımcılarla paylaşıldı.",
+  "image": "/assests/images/CopilotWebinar.png",
+  "imageFit": "cover",
+  "imageAlt": "Beril Dindar, Copilot & Copilot Agents webinarında kurumsal yapay zekâ çözümlerini anlatırken",
+  "topics": [
+    "Microsoft Copilot",
+    "Copilot Agents",
+    "Agentic AI",
+    "Microsoft 365",
+    "Generative AI",
+    "Business Process Automation",
+    "Enterprise AI"
+  ],
+  "links": [
+    {
+      "label": "Etkinlik duyurusunu görüntüle",
+      "url": "https://www.linkedin.com/posts/dtech-cloud_dtechcloud-microsoft-logosoft-activity-7328404584874356737-o1MH?utm_source=share&utm_medium=member_desktop&rcm=ACoAACcVfhMBdvwm_YdjW8hGqsOrnI60M3J1O80"
+    }
+  ]
 }
 ]
