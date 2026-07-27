@@ -239,5 +239,33 @@
       "url": "https://www.linkedin.com/posts/dtech-cloud_dtechcloud-microsoft-azureopenai-activity-7341088913232465920-NUmS?utm_source=share&utm_medium=member_desktop&rcm=ACoAACcVfhMBdvwm_YdjW8hGqsOrnI60M3J1O80"
     }
   ]
+},
+{
+  "title": "Veriden Değere: Microsoft Fabric ile Yapay Zekâya Hazırlık",
+  "organization": "D Tech Cloud & Microsoft",
+  "date": "2025-11-05",
+  "type": "Webinar",
+  "location": "Online (Microsoft Teams)",
+  "description": "D Tech Cloud ve Microsoft iş birliğiyle düzenlenen webinarda, Microsoft Fabric'in kurumların verilerini yapay zekâya hazır hale getirme sürecindeki rolü ele alındı. Oturumda uçtan uca veri entegrasyonu, OneLake mimarisi, veri mühendisliği, analitik, gerçek zamanlı veri işleme ve AI destekli kullanım senaryoları teknik ve stratejik yönleriyle değerlendirildi.",
+  "image": "/assests/images/MicrosoftFabricWebinar.png",
+  "imageFit": "cover",
+  "imageAlt": "Beril Dindar, Veriden Değere: Microsoft Fabric ile Yapay Zekâya Hazırlık webinarında sunum gerçekleştirirken",
+  "topics": [
+    "Microsoft Fabric",
+    "Data Engineering",
+    "OneLake",
+    "Data Analytics",
+    "Artificial Intelligence",
+    "Data Governance",
+    "Cloud Computing",
+    "Digital Transformation"
+  ],
+  "links": [
+    {
+      "label": "Etkinlik duyurusunu görüntüle",
+      "url": "https://www.linkedin.com/posts/dtech-cloud_dtechcloud-microsoft-microsoftfabric-activity-7387397844414058496-WUlv?utm_source=share&utm_medium=member_desktop&rcm=ACoAACcVfhMBdvwm_YdjW8hGqsOrnI60M3J1O80"
+    }
+  ]
 }
+
 ]
