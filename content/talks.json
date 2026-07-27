@@ -266,6 +266,33 @@
       "url": "https://www.linkedin.com/posts/dtech-cloud_dtechcloud-microsoft-microsoftfabric-activity-7387397844414058496-WUlv?utm_source=share&utm_medium=member_desktop&rcm=ACoAACcVfhMBdvwm_YdjW8hGqsOrnI60M3J1O80"
     }
   ]
+},
+{
+  "title": "Microsoft Ignite | Öne Çıkan Gelişmeler",
+  "organization": "D Tech Cloud",
+  "date": "2025-11-20",
+  "type": "Teknik Yayın",
+  "location": "Online",
+  "description": "Microsoft Ignite kapsamında duyurulan yeniliklerin değerlendirildiği teknik yayında; Microsoft'un Agentic AI vizyonu, Azure AI Foundry, kurumsal yapay zekâ mimarileri, güvenlik ekosistemindeki gelişmeler ve enterprise-grade AI yaklaşımları teknik ve stratejik perspektiften ele alındı. Yayında ayrıca AI Governance, Security for AI ve kurumsal yapay zekâ dönüşümüne yönelik öne çıkan gelişmeler değerlendirildi.",
+  "image": "/assests/images/MicrosoftIgnite.png",
+  "imageFit": "cover",
+  "imageAlt": "Beril Dindar, Microsoft Ignite kapsamında duyurulan yenilikleri değerlendirdiği teknik yayında",
+  "topics": [
+    "Microsoft Ignite",
+    "Agentic AI",
+    "Azure AI Foundry",
+    "AI Governance",
+    "Enterprise AI",
+    "AI Security",
+    "Microsoft Security",
+    "Tech Strategy"
+  ],
+  "links": [
+    {
+      "label": "Yayını görüntüle",
+      "url": "https://www.youtube.com/watch?v=6xL5CZowW78&t=2183s"
+    }
+  ]
 }
 
 ]
