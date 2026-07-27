@@ -293,6 +293,35 @@
       "url": "https://www.youtube.com/watch?v=6xL5CZowW78&t=2183s"
     }
   ]
+},
+{
+  "title": "İleri Seviye Power BI: Kurumsal Veri Analitiği ve BI Mimarileri",
+  "organization": "OSTİM Teknik Üniversitesi",
+  "date": "2025-12-01",
+  "type": "Kurumsal Eğitim",
+  "location": "Ankara",
+  "description": "OSTİM Teknik Üniversitesi'nde gerçekleştirilen ileri seviye Power BI eğitiminde; kurumsal veri modelleme mimarileri, ileri seviye DAX geliştirme, performans optimizasyonu, BI güvenliği, veri yönetişimi ve modern analitik platformlarının tasarımı gerçek kurumsal senaryolar üzerinden ele alındı. Eğitim boyunca katılımcılarla ölçeklenebilir raporlama, güvenli veri erişimi ve yapay zekâ destekli analitik yaklaşımları uygulamalı olarak değerlendirildi.",
+  "image": "/assests/images/OstimPowerBI.png",
+  "imageFit": "cover",
+  "imageAlt": "Beril Dindar, OSTİM Teknik Üniversitesi'nde ileri seviye Power BI eğitimi verirken",
+  "topics": [
+    "Microsoft Power BI",
+    "DAX",
+    "Data Modeling",
+    "Data Governance",
+    "Business Intelligence",
+    "Performance Optimization",
+    "Analytics",
+    "Microsoft Fabric"
+  ],
+  "links": [
+    {
+      "label": "LinkedIn paylaşımını görüntüle",
+      "url": "https://www.linkedin.com/posts/berildindar_powerbi-businessintelligence-artificialintelligence-activity-7434290544765390848-anCS?utm_source=share&utm_medium=member_desktop&rcm=ACoAACcVfhMBdvwm_YdjW8hGqsOrnI60M3J1O80"
+    }
+  ]
 }
+
+
 
 ]
