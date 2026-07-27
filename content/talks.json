@@ -213,5 +213,31 @@
       "url": "https://www.linkedin.com/posts/dtech-cloud_dtechcloud-microsoft-logosoft-activity-7328404584874356737-o1MH?utm_source=share&utm_medium=member_desktop&rcm=ACoAACcVfhMBdvwm_YdjW8hGqsOrnI60M3J1O80"
     }
   ]
+},
+  {
+  "title": "Azure OpenAI ile Kurumsal Yapay Zekâ Dönüşümü",
+  "organization": "D Tech Cloud, Microsoft & Logosoft Bilişim Teknolojileri A.Ş.",
+  "date": "2025-06-24",
+  "type": "Webinar",
+  "location": "Online (Microsoft Teams)",
+  "description": "D Tech Cloud, Microsoft ve Logosoft iş birliğiyle düzenlenen webinarda Azure OpenAI teknolojileri ve kurumsal yapay zekâ dönüşümü ele alındı. Oturumda Azure AI Foundry, Azure OpenAI Service, üretken yapay zekâ çözümleri, kurumsal kullanım senaryoları, güvenlik, ölçeklenebilirlik ve Microsoft ekosistemindeki AI uygulamaları teknik bakış açısıyla katılımcılarla paylaşıldı.",
+  "image": "/assests/images/AzureOpenAIWebinar.png",
+  "imageFit": "cover",
+  "imageAlt": "Beril Dindar, Azure OpenAI ile Kurumsal Yapay Zekâ Dönüşümü webinarında sunum gerçekleştirirken",
+  "topics": [
+    "Azure OpenAI",
+    "Azure AI Foundry",
+    "Generative AI",
+    "Enterprise AI",
+    "Microsoft Azure",
+    "AI Strategy",
+    "Digital Transformation"
+  ],
+  "links": [
+    {
+      "label": "Etkinlik duyurusunu görüntüle",
+      "url": "https://www.linkedin.com/posts/dtech-cloud_dtechcloud-microsoft-azureopenai-activity-7341088913232465920-NUmS?utm_source=share&utm_medium=member_desktop&rcm=ACoAACcVfhMBdvwm_YdjW8hGqsOrnI60M3J1O80"
+    }
+  ]
 }
 ]
