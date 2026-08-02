@@ -211,6 +211,10 @@
     {
       "label": "Etkinlik duyurusunu görüntüle",
       "url": "https://www.linkedin.com/posts/dtech-cloud_dtechcloud-microsoft-logosoft-activity-7328404584874356737-o1MH?utm_source=share&utm_medium=member_desktop&rcm=ACoAACcVfhMBdvwm_YdjW8hGqsOrnI60M3J1O80"
+    },
+    {
+      "label": "Yayını görüntüle",
+      "url": "https://www.youtube.com/watch?v=LsyHRvLIpNY&t=2683s"
     }
   ]
 },
@@ -237,6 +241,10 @@
     {
       "label": "Etkinlik duyurusunu görüntüle",
       "url": "https://www.linkedin.com/posts/dtech-cloud_dtechcloud-microsoft-azureopenai-activity-7341088913232465920-NUmS?utm_source=share&utm_medium=member_desktop&rcm=ACoAACcVfhMBdvwm_YdjW8hGqsOrnI60M3J1O80"
+    },
+     {
+      "label": "Yayını görüntüle",
+      "url": "https://www.youtube.com/watch?v=chM5v88ChAs&t=2243s"
     }
   ]
 },
@@ -264,6 +272,10 @@
     {
       "label": "Etkinlik duyurusunu görüntüle",
       "url": "https://www.linkedin.com/posts/dtech-cloud_dtechcloud-microsoft-microsoftfabric-activity-7387397844414058496-WUlv?utm_source=share&utm_medium=member_desktop&rcm=ACoAACcVfhMBdvwm_YdjW8hGqsOrnI60M3J1O80"
+    },
+    {
+      "label": "Yayını görüntüle",
+      "url": "https://www.youtube.com/watch?v=699QKyd3GPU&t=3220s"
     }
   ]
 },
@@ -271,7 +283,7 @@
   "title": "Microsoft Ignite | Öne Çıkan Gelişmeler",
   "organization": "D Tech Cloud",
   "date": "2025-11-20",
-  "type": "Teknik Yayın",
+  "type": "Webinar",
   "location": "Online",
   "description": "Microsoft Ignite kapsamında duyurulan yeniliklerin değerlendirildiği teknik yayında; Microsoft'un Agentic AI vizyonu, Azure AI Foundry, kurumsal yapay zekâ mimarileri, güvenlik ekosistemindeki gelişmeler ve enterprise-grade AI yaklaşımları teknik ve stratejik perspektiften ele alındı. Yayında ayrıca AI Governance, Security for AI ve kurumsal yapay zekâ dönüşümüne yönelik öne çıkan gelişmeler değerlendirildi.",
   "image": "/assests/images/MicrosoftIgnite.png",
